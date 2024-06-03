@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+}
+
+.inner {
+    width: 50%;
+    margin: 300px auto;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(50, 50, 50, 0.8);
+}
+
+.inner .profile {
+    width: 100%;
+    padding: 50px;
+}
+
+.inner .profile img {
+    width: 300px;
+    height: 300px;
+    margin-left: calc(50% - 150px);
+    animation: fadein 1s ease;
+    animation-timeline: view();
+}
+
+.inner .profile h1 {
+    width: 100%;
+    text-align: center;
+    font-style: italic bold;
+    color: #999;
+    font-size: 40px;
+}
+
+.inner .profile p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #777;
+    font-size: 20px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        size: 0px;
+    }
+    to {
+        opacity: 1;
+        size: 300px;
+    }
+    0% {
+        opacity: 0;
+        size: 0px;
+    }
+}
+
+.inner .btnAdd {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: calc(50% - 50px);
+    cursor: pointer;
+    background-color: #0000;
+    border: none;
+}
+
+.inner .btnAdd i {
+    width: 100%;
+    height: 100%;
+    color: #111;
+    font-size: 80px;
+}
+
+.inner .btnAdd i:hover {
+    color: #222;
+}
+
+.inner .btnAdd i:active {
+    color: #2228;
+}
+
+.inner .new_post {
+    width: 100%;
+    padding: 10px 15px 15px;
+}
+
+.inner .new_post input {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    line-height: normal;
+    visibility: inherit;
+}
+
+.inner .new_post .submit {
+    width: 150px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: calc(50% - 75px);
+    visibility: inherit;
+}
+
+.inner .new_post .submit p {
+    font-size: 20px;
+    visibility: inherit;
+}
+
+.inner .new_post.on {
+    visibility: visible;
+}
+
+.inner .new_post.off {
+    display: none;
+}
